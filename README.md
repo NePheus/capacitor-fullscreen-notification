@@ -61,41 +61,15 @@ Send a data push notification (leave the field notification empty!) with the fol
 
 ```json
 {
-    {
-        "fullScreenId",
-        "my-fullscreen-identifier"
-    },
-    {
-        "channelId",
-        "fullscreen-channel"
-    },
-    {
-        "channelName",
-        "My Fullscreen Channel"
-        },
-    {
-        "channelDescription", "Notifications in this channel will be displayed with a fullscreen intent"
-    },
-    {
-        "title",
-        "Test notification"
-    },
-    {
-        "text",
-        "Test description"
-    },
-    {
-        "timeout",
-        "10000"
-    },
-    {
-        "vibrationPattern",
-        "[500, 300, 500, 300, 500, 300, 500, 300]"
-    },
-    {
-        "actionButtons",
-        "[{ \"id\": \"reject\", \"text\": \"Reject\" }, { \"id\": \"accept\", \"text\": \"Accept\" }]"
-    }
+  "fullScreenId": "my-fullscreen-identifier",
+  "channelId": "fullscreen-channel",
+  "channelName": "My Fullscreen Channel",
+  "channelDescription": "Notifications in this channel will be displayed with a fullscreen intent",
+  "title": "Test notification",
+  "text": "Test description",
+  "timeout": "10000",
+  "vibrationPattern": "[500, 300, 500, 300, 500, 300, 500, 300]",
+  "actionButtons": "[{ \"id\": \"reject\", \"text\": \"Reject\" }, { \"id\": \"accept\", \"text\": \"Accept\" }]"
 }
 ```
 
@@ -141,8 +115,7 @@ Cancel the current notification
 
 **Returns:** <code>any</code>
 
---------------------
-
+---
 
 ### addListener(...)
 
@@ -161,11 +134,9 @@ The parameter gives you the information if an action button has been clicked.
 
 **Returns:** <code>any</code>
 
---------------------
-
+---
 
 ### Interfaces
-
 
 #### PluginListenerHandle
 
