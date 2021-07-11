@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="intent_filter_action_pushnotification">android.intent.action.capacitor.pushnotification</string>
+    <string name="intent_filter_action_call">android.intent.action.capacitor.call</string>
+</resources>
