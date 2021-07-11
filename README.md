@@ -40,7 +40,7 @@ Send a data push notification (leave the field notification empty!) with the fol
 
 | Option                   | Description                                                                                                                                      |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **`fullScreenId`**       | Identifier, that can be read in the launch event                                                                                                 |
+| **`fullScreenId`**       | (Required) Identifier of the fullscreen notification                                                                                             |
 | **`channelId`**          | Identifier of the notification channel                                                                                                           |
 | **`channelName`**        | Name of the notification channel                                                                                                                 |
 | **`channelDescription`** | Description of the notification channel                                                                                                          |
