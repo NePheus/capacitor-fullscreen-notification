@@ -48,6 +48,11 @@ public class MessagingService extends Service {
         unregisterReceiver(receiver);
     }
 
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        return START_STICKY;
+    }
+
     private void registerReceiver() {
         receiver = new BroadcastReceiver() {
             @Override

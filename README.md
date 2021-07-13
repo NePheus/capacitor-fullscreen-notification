@@ -115,7 +115,8 @@ Cancel the current notification
 
 **Returns:** <code>any</code>
 
----
+--------------------
+
 
 ### addListener(...)
 
@@ -134,9 +135,11 @@ The parameter gives you the information if an action button has been clicked.
 
 **Returns:** <code>any</code>
 
----
+--------------------
+
 
 ### Interfaces
+
 
 #### PluginListenerHandle
 
