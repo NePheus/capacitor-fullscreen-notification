@@ -1,5 +1,6 @@
 package nepheus.capacitor.fullscreennotification;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -50,6 +51,26 @@ public class MessagingService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        super.onStartCommand(intent, flags, startId);
+
+        if (Build.VERSION.SDK_INT >= 26) {
+            String channelId = intent.getStringExtra("notificationChannelId");
+            String channelName = intent.getStringExtra("notificationChannelName");
+            NotificationChannel channel = new NotificationChannel(channelId,
+                    channelName,
+                    NotificationManager.IMPORTANCE_LOW);
+            channel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+
+            ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(channel);
+
+            Notification notification = new NotificationCompat.Builder(this, channelId)
+                    .setContentTitle("")
+                    .setContentText("")
+                    .build();
+
+            startForeground(1, notification);
+        }
+
         return START_STICKY;
     }
 

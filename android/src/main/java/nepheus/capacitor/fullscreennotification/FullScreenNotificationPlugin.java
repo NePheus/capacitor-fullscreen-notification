@@ -1,6 +1,7 @@
 package nepheus.capacitor.fullscreennotification;
 
 import android.app.NotificationManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -16,8 +17,9 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "FullScreenNotification")
 public class FullScreenNotificationPlugin extends Plugin {
     public void load() {
-        Intent service = new Intent(getContext(), MessagingService.class);
-        getContext().startService(service);
+        Intent broadcastIntent = new Intent(getContext(), MessagingServiceStarter.class);
+        broadcastIntent.setAction(getContext().getResources().getString(R.string.intent_filter_action_startservice));
+        getContext().sendBroadcast(broadcastIntent);
     }
 
     @PluginMethod

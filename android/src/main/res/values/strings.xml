@@ -2,4 +2,5 @@
 <resources>
     <string name="intent_filter_action_pushnotification">android.intent.action.capacitor.pushnotification</string>
     <string name="intent_filter_action_call">android.intent.action.capacitor.call</string>
+    <string name="intent_filter_action_startservice">android.intent.action.capacitor.fullscreennotification.startservice</string>
 </resources>
