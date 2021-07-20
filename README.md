@@ -75,7 +75,7 @@ Send a data push notification (leave the field notification empty!) with the fol
 
 ### App
 
-In you app, you can listen to the launch of the application and cancel the active notification:
+In your app, you can listen to the launch of the application. This event is fired when the fullscreen notification opens or the heads up notification is clicked. You can also cancel the active notification, if it exists:
 
 ```javascript
 import { FullScreenNotification } from 'capacitor-fullscreen-notification';
