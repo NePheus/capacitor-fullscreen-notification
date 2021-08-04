@@ -5,7 +5,7 @@
 
 Start a fullscreen intent with a local notification triggered by a push notification.
 
-The fullscreen notification will only be launched instantly, when you device is in standby. If not, you get a default heads up notification with the defined title, text and actionButtons.
+The fullscreen notification will only be launched instantly, when your device is in standby. If not, you get a default heads up notification with the defined title, text and actionButtons.
 
 To identify in your 'launch' listener, if the notification has been fullscreen started or by clicking the heads up notification, you can check the property 'isNotificationActive' in the response data. This is only true in the fullscreen notification, because by clicking the heads up notification, it gets removed by the system automatically.
 
