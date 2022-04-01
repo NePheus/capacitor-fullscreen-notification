@@ -53,7 +53,7 @@ public class MessagingService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
 
-        if (Build.VERSION.SDK_INT >= 26) {
+        if (Build.VERSION.SDK_INT >= 26 && intent != null) {
             String channelId = intent.getStringExtra("notificationChannelId");
             String channelName = intent.getStringExtra("notificationChannelName");
             NotificationChannel channel = new NotificationChannel(channelId,
