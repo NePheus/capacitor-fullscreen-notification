@@ -1,6 +1,6 @@
 {
   "name": "capacitor-fullscreen-notification",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Start a fullscreen intent with a local notification triggered by a push notification",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

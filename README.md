@@ -3,11 +3,9 @@
 
 # capacitor-fullscreen-notification
 
-Start a fullscreen intent with a local notification triggered by a push notification.
+This plugin can automatically launch your app, triggered by a push notification.
 
-The fullscreen notification will only be launched instantly, when your device is in standby. If not, you get a default heads up notification with the defined title, text and actionButtons.
-
-To identify in your 'launch' listener, if the notification has been fullscreen started or by clicking the heads up notification, you can check the property 'isNotificationActive' in the response data. This is only true in the fullscreen notification, because by clicking the heads up notification, it gets removed by the system automatically.
+Use case example: Someone rings your doorbell -> your app opens and navigates to a specific route
 
 ## Supported platforms
 
@@ -24,12 +22,52 @@ npm install capacitor-fullscreen-notification
 npx cap sync android
 ```
 
+Add this to the activity inside your AndroidManifest.xml:
+
+```
+android:showWhenLocked="true"
+android:turnScreenOn="true"
+```
+
 ## Dependencies
 
 The fullscreen notification gets triggered by a firebase push notification, so you also have to install the package [@capacitor/push-notifications](https://github.com/ionic-team/capacitor-plugins/tree/main/push-notifications).
 
 > **⚠ IMPORTANT**  
 > For now, you have to install [this updated version of @capacitor/push-notifications](https://github.com/NePheus/capacitor-plugins/tree/added-broadcast-intent-dist/push-notifications)
+
+## Android behavior
+
+The Android OS differs between an locked and unlocked device.
+
+### Locked
+
+The app will only be launched instantly, when your device is in standby.
+
+### Unlocked
+
+If your device is not in standby, you will get a default heads up notification with the defined title, text and actionButtons. When you click on it, the app will launch.
+
+> **HINT**  
+> To identify if the app has been launched instantly or by clicking the heads up notification, you can check the property 'isNotificationActive' in the response data of your 'launch' listener. This is true on instant launch.
+
+## Workflow
+
+This plugin will start a fullscreen intent by a local notification, when it receives a specific data push notification.
+
+| Firebase            |
+| ------------------- |
+| 1. Send a data push |
+
+| Plugin                                                |
+| ----------------------------------------------------- |
+| 2. Receives the data push                             |
+| 3. Sends a local notification with full screen intent |
+| 4. Sends a local notification with full screen intent |
+
+| App                                         |
+| ------------------------------------------- |
+| 5. Listen to event and redirect to any page |
 
 ## Usage
 
