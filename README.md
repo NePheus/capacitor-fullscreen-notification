@@ -59,11 +59,11 @@ This plugin will start a fullscreen intent by a local notification, when it rece
 | ------------------- |
 | 1. Send a data push |
 
-| Plugin                                                |
-| ----------------------------------------------------- |
-| 2. Receives the data push                             |
-| 3. Sends a local notification with full screen intent |
-| 4. Sends a local notification with full screen intent |
+| Plugin                                                            |
+| ----------------------------------------------------------------- |
+| 2. Receives the data push                                         |
+| 3. Sends a local notification with full screen intent (opens app) |
+| 4. Emits a plugin event                                           |
 
 | App                                         |
 | ------------------------------------------- |
