@@ -29,8 +29,7 @@ npx cap sync android
 The fullscreen notification gets triggered by a firebase push notification, so you also have to install the package [@capacitor/push-notifications](https://github.com/ionic-team/capacitor-plugins/tree/main/push-notifications).
 
 > **⚠ IMPORTANT**  
-> For now, you have to install this version of @capacitor/push-notifications: **https://github.com/NePheus/capacitor-push-notifications/blob/master/README.md**
-> See the top of the readme of this repository for the reason.
+> For now, you have to install [this updated version of @capacitor/push-notifications](https://github.com/NePheus/capacitor-plugins/tree/added-broadcast-intent-dist/push-notifications)
 
 ## Usage
 
