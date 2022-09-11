@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="intent_filter_action_pushnotification">android.intent.action.capacitor.pushnotification</string>
-    <string name="intent_filter_action_call">android.intent.action.capacitor.call</string>
-    <string name="intent_filter_action_startservice">android.intent.action.capacitor.fullscreennotification.startservice</string>
+    <string name="intent_filter_action_fullscreennotification_trigger">android.intent.action.capacitor.fullscreennotification.trigger</string>
 </resources>

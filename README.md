@@ -3,7 +3,7 @@
 
 # capacitor-fullscreen-notification
 
-This plugin can automatically launch your app, triggered by a push notification.
+This plugin can automatically launch your app, triggered by a data push notification by the [@capacitor/push-notifications](https://github.com/ionic-team/capacitor-plugins/tree/main/push-notifications) plugin.
 
 Use case example: Someone rings your doorbell -> your app opens and navigates to a specific route
 
@@ -28,13 +28,6 @@ Add this to the activity inside your AndroidManifest.xml:
 android:showWhenLocked="true"
 android:turnScreenOn="true"
 ```
-
-## Dependencies
-
-The fullscreen notification gets triggered by a firebase push notification, so you also have to install the package [@capacitor/push-notifications](https://github.com/ionic-team/capacitor-plugins/tree/main/push-notifications).
-
-> **⚠ IMPORTANT**  
-> For now, you have to install [this updated version of @capacitor/push-notifications](https://github.com/NePheus/capacitor-plugins/tree/added-broadcast-intent-dist/push-notifications)
 
 ## Android behavior
 
