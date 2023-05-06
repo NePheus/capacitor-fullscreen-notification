@@ -17,6 +17,11 @@ export interface FullScreenNotificationPlugin {
     eventName: 'launch',
     listenerFunc: MessageListener,
   ): Promise<PluginListenerHandle> & PluginListenerHandle;
+
+  /**
+   * Removes all listeners.
+   */
+  removeAllListeners(): Promise<void>;
 }
 
 export type MessageListener = (response: any) => void;

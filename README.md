@@ -148,7 +148,7 @@ Cancel the current notification
 --------------------
 
 
-### addListener(...)
+### addListener('launch', ...)
 
 ```typescript
 addListener(eventName: 'launch', listenerFunc: MessageListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -158,10 +158,23 @@ Add a listener when the fullscreen intent launches the app.
 You can navigate here to the destination page.
 The parameter gives you the information if an action button has been clicked.
 
-| Param              | Type                                    |
-| ------------------ | --------------------------------------- |
-| **`eventName`**    | <code>"launch"</code>                   |
-| **`listenerFunc`** | <code>(response: any) =&gt; void</code> |
+| Param              | Type                                                        |
+| ------------------ | ----------------------------------------------------------- |
+| **`eventName`**    | <code>'launch'</code>                                       |
+| **`listenerFunc`** | <code><a href="#messagelistener">MessageListener</a></code> |
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### removeAllListeners()
+
+```typescript
+removeAllListeners() => any
+```
+
+Removes all listeners.
 
 **Returns:** <code>any</code>
 
@@ -176,5 +189,13 @@ The parameter gives you the information if an action button has been clicked.
 | Prop         | Type                      |
 | ------------ | ------------------------- |
 | **`remove`** | <code>() =&gt; any</code> |
+
+
+### Type Aliases
+
+
+#### MessageListener
+
+<code>(response: any): void</code>
 
 </docgen-api>
