@@ -41,8 +41,12 @@ The app will only be launched instantly, when your device is in standby.
 
 If your device is not in standby, you will get a default heads up notification with the defined title, text and actionButtons. When you click on it, the app will launch.
 
-> **HINT**  
+> **HINT**\
 > To identify if the app has been launched instantly or by clicking the heads up notification, you can check the property 'isNotificationActive' in the response data of your 'launch' listener. This is true on instant launch.
+
+> **HINT: Android 14 and above**\
+> Starting with Android 14, the full screen intent permission must be granted manually by the user after each update, if the app does not provide calling and alarm functionalities.\
+> More info: https://source.android.com/docs/core/permissions/fsi-limits
 
 ## Workflow
 
@@ -148,10 +152,36 @@ Cancel the current notification
 --------------------
 
 
+### canUseFullScreenIntent()
+
+```typescript
+canUseFullScreenIntent() => any
+```
+
+Check if the user granted permission to show full screen intents
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### openFullScreenIntentSettings()
+
+```typescript
+openFullScreenIntentSettings() => any
+```
+
+Open the settings page to grant the full screen permission
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
 ### addListener('launch', ...)
 
 ```typescript
-addListener(eventName: 'launch', listenerFunc: MessageListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+addListener(eventName: 'launch', listenerFunc: MessageListener) => any
 ```
 
 Add a listener when the fullscreen intent launches the app.

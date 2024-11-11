@@ -7,6 +7,20 @@ export interface FullScreenNotificationPlugin {
   cancelNotification(): Promise<void>;
 
   /**
+   * Check if the user granted permission to show full screen intents
+   */
+  canUseFullScreenIntent(): Promise<{
+    result: boolean;
+  }>;
+
+  /**
+   * Open the settings page to grant the full screen permission
+   */
+  openFullScreenIntentSettings(): Promise<{
+    result: boolean;
+  }>;
+
+  /**
    * Add a listener when the fullscreen intent launches the app.
    * You can navigate here to the destination page.
    * The parameter gives you the information if an action button has been clicked.
@@ -16,7 +30,7 @@ export interface FullScreenNotificationPlugin {
   addListener(
     eventName: 'launch',
     listenerFunc: MessageListener,
-  ): Promise<PluginListenerHandle> & PluginListenerHandle;
+  ): Promise<PluginListenerHandle>;
 
   /**
    * Removes all listeners.
