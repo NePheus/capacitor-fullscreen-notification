@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/capacitor-fullscreen-notification.svg)](https://badge.fury.io/js/capacitor-fullscreen-notification)
-[![capacitor support](https://img.shields.io/badge/capacitor%20support-v5-brightgreen?logo=capacitor)](https://capacitorjs.com/)
+[![capacitor support](https://img.shields.io/badge/capacitor%20support-v7-brightgreen?logo=capacitor)](https://capacitorjs.com/)
 
 # capacitor-fullscreen-notification
 
